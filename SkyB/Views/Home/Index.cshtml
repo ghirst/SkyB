@@ -1,0 +1,38 @@
+﻿@model NameValuesModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*//form*@
+
+@using(Html.BeginForm("SendStuff", "Home", FormMethod.Post))
+{
+
+<div class="text-center">
+    <h1 class="display-4">Stuff</h1>
+     
+    <label>Name</label>
+    @Html.TextBoxFor(m => m.Name)
+     
+    <br />
+    <label>Username</label>
+    @Html.TextBoxFor(m => m.Username) 
+    <br />
+    <label>Password</label>
+     @Html.TextBoxFor(m => m.Password)
+    <br />
+    <label>Retype Password</label>
+     @Html.TextBoxFor(m => m.RetypePassword)
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(m => m.Email)
+    <br />
+    <label>DOB</label>
+     @Html.TextBoxFor(m => m.DOB)
+    <br /> 
+     <input type="submit" text="Random Button to do thing!" /> 
+
+
+</div>
+
+}
